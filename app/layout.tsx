@@ -9,19 +9,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Yaroslav - Senior Full-Stack Developer",
-  description: "Portfolio of Yaroslav, a Senior Full-Stack Developer specialized in MERN, Vue/Laravel and Python Backend.",
+  title: "Yaroslav - Full-Stack Developer",
+  description: "Portfolio website of Yaroslav, a Senior Full-Stack Developer specializing in modern web technologies.",
   keywords: ["developer", "portfolio", "full-stack", "MERN", "Vue", "Laravel", "Python"],
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} antialiased`}>
+    <html lang="en" className={`${inter.variable} antialiased`}>
+      <body className={inter.className}>
         {children}
       </body>
     </html>

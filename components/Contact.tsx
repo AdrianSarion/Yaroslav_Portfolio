@@ -107,7 +107,7 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             Have a project in mind or just want to say hello? 
-            Fill out the form below and I'll get back to you as soon as possible.
+            Fill out the form below and I&apos;ll get back to you as soon as possible.
           </motion.p>
         </div>
         
@@ -181,7 +181,7 @@ export default function Contact() {
               
               {submitSuccess && (
                 <div className="p-4 bg-green-500/20 text-green-400 rounded-md text-center">
-                  Message sent successfully! I'll get back to you soon.
+                  Message sent successfully! I&apos;ll get back to you soon.
                 </div>
               )}
             </form>
@@ -200,7 +200,7 @@ export default function Contact() {
               
               <p className="text-foreground/70 mb-6">
                 Whether you have a project idea, a question, or just want to say hello,
-                I'm always open to discussing new opportunities and challenges.
+                I&apos;m always open to discussing new opportunities and challenges.
               </p>
               
               <div className="space-y-4 mb-8">

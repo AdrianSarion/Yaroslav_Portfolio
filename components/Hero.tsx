@@ -1,12 +1,11 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Stars, MeshDistortMaterial, useCursor, TorusKnot, RoundedBox, Sphere } from '@react-three/drei';
+import { OrbitControls, Stars, MeshDistortMaterial, TorusKnot, RoundedBox, Sphere } from '@react-three/drei';
 import { Link as ScrollLink } from 'react-scroll';
 import * as THREE from 'three';
-import { useState } from 'react';
 
 function AnimatedObjects() {
   return (
@@ -94,7 +93,7 @@ function RotatingRing({ radius = 5, count = 12, height = 0, color = "#ff0080", r
           <Sphere 
             key={i} 
             args={[0.25, 16, 16]} 
-            position={[x, height, z]}
+            position={[x, height, z] as [number, number, number]}
           >
             <meshStandardMaterial 
               color={color} 
@@ -114,12 +113,12 @@ function FloatingSpheres() {
   const group = useRef<THREE.Group>(null);
   const colors = ['#ff0080', '#1fb2a6', '#9333ea', '#f43f5e', '#3b82f6'];
   const sphereCount = 8;
-  const spheres = Array.from({ length: sphereCount }, (_, i) => ({
+  const spheres = Array.from({ length: sphereCount }, (_, index) => ({
     position: [
       (Math.random() - 0.5) * 20,
       (Math.random() - 0.5) * 20,
       (Math.random() - 0.5) * 20
-    ],
+    ] as [number, number, number],
     scale: Math.random() * 0.3 + 0.1,
     color: colors[Math.floor(Math.random() * colors.length)],
     speed: Math.random() * 0.05 + 0.02,
@@ -131,8 +130,8 @@ function FloatingSpheres() {
     if (group.current) {
       group.current.rotation.y = state.clock.getElapsedTime() * 0.05;
       
-      group.current.children.forEach((child, i) => {
-        const sphere = spheres[i];
+      group.current.children.forEach((child, index) => {
+        const sphere = spheres[index];
         child.position.y += Math.sin(state.clock.getElapsedTime() * sphere.speed) * 0.01;
         child.rotation.x += sphere.rotationSpeed;
         child.rotation.z += sphere.rotationSpeed * 0.5;
@@ -142,8 +141,8 @@ function FloatingSpheres() {
 
   return (
     <group ref={group}>
-      {spheres.map((sphere, i) => (
-        <mesh key={i} position={sphere.position as any} scale={sphere.scale}>
+      {spheres.map((sphere, index) => (
+        <mesh key={index} position={sphere.position} scale={sphere.scale}>
           <sphereGeometry args={[1, 32, 32]} />
           <MeshDistortMaterial
             color={sphere.color}

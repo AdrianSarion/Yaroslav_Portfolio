@@ -18,7 +18,7 @@ export default {
         border: "var(--border)",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
       },
       animation: {
         'spin-slow': 'spin 8s linear infinite',

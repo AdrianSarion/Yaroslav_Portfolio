@@ -2,7 +2,6 @@
 
 import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Image from 'next/image';
 
 // Define projects data
 const projectsData = [
@@ -57,7 +56,7 @@ const projectsData = [
 ];
 
 // Placeholder image component for projects
-function ProjectImage({ alt }: { alt: string }) {
+function ProjectImage() {
   return (
     <div className="bg-gradient-to-br from-muted/80 to-muted h-64 w-full rounded-t-xl overflow-hidden relative flex items-center justify-center group-hover:from-primary/10 group-hover:to-secondary/10 transition-all duration-500">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-secondary/20 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
@@ -170,7 +169,7 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
             >
-              <ProjectImage alt={project.title} />
+              <ProjectImage />
               
               <div className="p-6 flex-1 flex flex-col backdrop-blur-sm bg-background/30">
                 <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors duration-300">{project.title}</h3>

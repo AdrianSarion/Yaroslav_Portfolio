@@ -103,7 +103,7 @@ export default function Skills() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             I have experience with a wide range of technologies across the full stack.
-            Here are some of the key skills I've developed throughout my career.
+            Here are some of the key skills I&apos;ve developed throughout my career.
           </motion.p>
         </div>
         
@@ -136,7 +136,7 @@ export default function Skills() {
         >
           <p className="text-foreground/70 mb-6">
             Beyond technical skills, I value clear communication, attention to detail, and continuous learning.
-            I'm always exploring new technologies and best practices to deliver the best solutions.
+            I&apos;m always exploring new technologies and best practices to deliver the best solutions.
           </p>
         </motion.div>
       </motion.div>

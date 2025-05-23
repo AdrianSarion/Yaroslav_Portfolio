@@ -41,7 +41,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p>
-              Hello! I'm Yaroslav, a Senior Full-Stack Developer with extensive experience in building robust and scalable web applications. 
+              Hello! I&apos;m Yaroslav, a Senior Full-Stack Developer with extensive experience in building robust and scalable web applications. 
               I specialize in modern JavaScript frameworks and libraries including React, Node.js, Vue.js, as well as Laravel and Python backends.
             </p>
             
@@ -52,7 +52,7 @@ export default function About() {
             </p>
             
             <p>
-              Throughout my career, I've worked with startups and established companies alike, helping them scale their digital presence and 
+              Throughout my career, I&apos;ve worked with startups and established companies alike, helping them scale their digital presence and 
               optimize their development workflows. My approach combines technical expertise with a deep understanding of business needs.
             </p>
             
